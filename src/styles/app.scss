@@ -1,0 +1,8 @@
+@import './components/components.scss';
+body {
+    background-color: $color-bg;
+    .app {
+      text-align: center;
+      @include envelope-style();
+    }
+}

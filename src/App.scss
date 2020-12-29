@@ -1,7 +1,4 @@
-.App {
-  text-align: center;
-}
-
+// NOT BEING USED AT THE MOMENT
 $color-env: #0077b2;
 $color-env2: darken($color-env, 3%);
 $color-flap: darken($color-env, 20%);
@@ -11,71 +8,83 @@ $env-border-radius: 6px;
 $env-width: 280px;
 $env-height: 180px;
 
-.envelope {
-  position: relative;
-  width: $env-width;
-  height: $env-height;
-  border-bottom-left-radius: $env-border-radius;
-  border-bottom-right-radius: $env-border-radius;
-  margin-left: auto;
-  margin-right: auto;
-  top: 150px;
-  background-color: $color-flap;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+body {
+  background-color: $color-bg;
+  .app {
+    text-align: center;
+    .envlope-wrapper {
+      height: ($env-height + 200px);
+    
+      .envelope {
+        position: relative;
+        width: $env-width;
+        height: $env-height;
+        border-bottom-left-radius: $env-border-radius;
+        border-bottom-right-radius: $env-border-radius;
+        margin-left: auto;
+        margin-right: auto;
+        top: 150px;
+        background-color: $color-flap;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        .front {
+          position: absolute;
+          width: 0;
+          height: 0;
+          z-index: 3;
+          &.flap {
+            border-left: ($env-width / 2) solid transparent;
+            border-right: ($env-width / 2) solid transparent;
+            border-bottom: ($env-height / 2) - 8 solid transparent; /* a little smaller */
+            border-top: ($env-height / 2) + 8 solid $color-flap; /* a little larger */
+            transform-origin: top;
+            pointer-events: none;
+            animation: flap-rotate 1s ease-out 0s 2 forwards;
+          }
+          &.pocket {
+            border-left: ($env-width / 2) solid $color-env;
+            border-right: ($env-width / 2) solid $color-env;
+            border-bottom: ($env-height / 2) solid $color-env2;
+            border-top: ($env-height / 2) solid transparent;
+            border-bottom-left-radius: $env-border-radius;
+            border-bottom-right-radius: $env-border-radius;
+          }
+        }
+        .letter {
+          position: relative;
+          background-color: #fff;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          height: 90%;
+          top: 5%;
+          border-radius: $env-border-radius;
+          box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: linear-gradient(
+              180deg,
+              rgba(255, 255, 255, 0) 25%,
+              rgba(215, 227, 239, 0.7) 55%,
+              rgba(215, 227, 239, 1) 100%
+            );
+          }
+        }
+      }
+    }
+    
+  }
+  
 }
 
-.front {
-  position: absolute;
-  width: 0;
-  height: 0;
-  z-index: 3;
-}
 
-.flap {
-  border-left: ($env-width / 2) solid transparent;
-  border-right: ($env-width / 2) solid transparent;
-  border-bottom: ($env-height / 2) - 8 solid transparent; /* a little smaller */
-  border-top: ($env-height / 2) + 8 solid $color-flap; /* a little larger */
-  transform-origin: top;
-  pointer-events: none;
-  animation: flap-rotate 1s ease-out 0s infinite forwards;
-}
 
-.pocket {
-  border-left: ($env-width / 2) solid $color-env;
-  border-right: ($env-width / 2) solid $color-env;
-  border-bottom: ($env-height / 2) solid $color-env2;
-  border-top: ($env-height / 2) solid transparent;
-  border-bottom-left-radius: $env-border-radius;
-  border-bottom-right-radius: $env-border-radius;
-}
 
-.letter {
-  position: relative;
-  background-color: #fff;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 90%;
-  top: 5%;
-  border-radius: $env-border-radius;
-  box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
-}
 
-.letter:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-image: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 25%,
-    rgba(215, 227, 239, 0.7) 55%,
-    rgba(215, 227, 239, 1) 100%
-  );
-}
 
 .words {
   position: absolute;
@@ -103,13 +112,7 @@ $env-height: 180px;
   top: 70%;
 }
 
-body {
-  background-color: $color-bg;
-}
 
-.envlope-wrapper {
-  height: ($env-height + 200px);
-}
 
 @keyframes flap-rotate {
   0% {

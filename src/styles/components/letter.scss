@@ -1,0 +1,27 @@
+@mixin letter-styles {
+    .letter {
+        position: relative;
+        background-color: #fff;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 90%;
+        top: 5%;
+        border-radius: $env-border-radius;
+        box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 25%,
+                rgba(215, 227, 239, 0.7) 55%,
+                rgba(215, 227, 239, 1) 100%
+            );
+        }
+    }
+}
