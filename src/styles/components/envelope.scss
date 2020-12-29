@@ -8,7 +8,7 @@
             .envelope {
                 .front {
                     &.flap {
-                        @include flap-and-fall();
+                        @include rotate-flap-and-fall();
                     }
                     &.pocket {
                         @include free-fall();
