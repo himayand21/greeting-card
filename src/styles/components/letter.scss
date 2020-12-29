@@ -2,13 +2,14 @@
     .letter {
         position: relative;
         background-color: #fff;
-        width: 275px;
+        width: 265px;
         margin-left: auto;
         margin-right: auto;
         height: 175px;
         top: -30px;
         border-radius: $env-border-radius;
         box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+        z-index: 2;
         &::after {
             content: "";
             position: absolute;

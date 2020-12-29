@@ -2,5 +2,8 @@
     animation: flap-rotate 1s ease-out 0s 2 forwards;
 }
 @mixin freefall {
-    animation: freefall  1s ease-out 0s 1 forwards;
+    animation: freefall 1s ease-out 1s 1 forwards;
+}
+@mixin flap-and-fall {
+    animation: flap-rotate 1s ease-out 0s 2 forwards, flap-and-fall 1s ease-out 1s 1 forwards;
 }

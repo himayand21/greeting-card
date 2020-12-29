@@ -6,7 +6,14 @@
 
         &.open {
             .envelope {
-                @include freefall();
+                .front {
+                    &.flap {
+                        @include flap-and-fall();
+                    }
+                    &.pocket {
+                        animation: freefall 1s ease-out 1s 1 forwards;
+                    }
+                }
             }
         }
         .envelope {
@@ -18,21 +25,20 @@
             margin-left: auto;
             margin-right: auto;
             top: 150px;
-            background-color: $color-flap;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            // background-color: $color-flap;
+            // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             .front {
                 position: absolute;
                 width: 0;
                 height: 0;
-                z-index: 3;
                 &.flap {
                     border-left: ($env-width / 2) solid transparent;
                     border-right: ($env-width / 2) solid transparent;
                     border-bottom: ($env-height / 2) - 8 solid transparent; /* a little smaller */
                     border-top: ($env-height / 2) + 8 solid $color-flap; /* a little larger */
                     transform-origin: top;
+                    z-index: 4;
                     pointer-events: none;
-                    animation: flap-rotate 1s ease-out 0s 2 forwards;
                 }
                 &.pocket {
                     border-left: ($env-width / 2) solid $color-env;
@@ -40,6 +46,7 @@
                     border-bottom: ($env-height / 2) solid $color-env2;
                     border-top: ($env-height / 2) solid transparent;
                     border-bottom-left-radius: $env-border-radius;
+                    z-index: 4;
                     border-bottom-right-radius: $env-border-radius;
                 }
             }
