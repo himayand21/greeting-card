@@ -1,9 +1,14 @@
 @mixin rotate-flap {
-    animation: flap-rotate 1s ease-out 0s 2 forwards;
+    animation: flap-rotate 1s ease-out 0s 1 forwards;
 }
-@mixin freefall {
-    animation: freefall 1s ease-out 1s 1 forwards;
+@mixin free-fall {
+    animation: free-fall 1s ease-out 1s 1 forwards;
 }
 @mixin flap-and-fall {
     animation: flap-rotate 1s ease-out 0s 2 forwards, flap-and-fall 1s ease-out 1s 1 forwards;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
