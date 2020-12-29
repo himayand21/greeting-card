@@ -4,5 +4,8 @@ body {
     .app {
       text-align: center;
       @include envelope-style();
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
     }
 }

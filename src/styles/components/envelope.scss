@@ -1,7 +1,14 @@
-@import './letter.scss';
+@import "./letter.scss";
 @mixin envelope-style {
     .envlope-wrapper {
         height: ($env-height + 200px);
+        @include letter-styles();
+
+        &.open {
+            .envelope {
+                @include freefall();
+            }
+        }
         .envelope {
             position: relative;
             width: $env-width;
@@ -36,7 +43,6 @@
                     border-bottom-right-radius: $env-border-radius;
                 }
             }
-            @include letter-styles();
         }
     }
 }

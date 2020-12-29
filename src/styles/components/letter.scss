@@ -2,11 +2,11 @@
     .letter {
         position: relative;
         background-color: #fff;
-        width: 90%;
+        width: 275px;
         margin-left: auto;
         margin-right: auto;
-        height: 90%;
-        top: 5%;
+        height: 175px;
+        top: -30px;
         border-radius: $env-border-radius;
         box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
         &::after {
