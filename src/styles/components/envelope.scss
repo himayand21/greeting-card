@@ -5,16 +5,15 @@
         @include letter-styles();
 
         &.open {
-            // @include free-fall();
             .envelope {
                 .front {
                     &.flap {
-                        animation: rotate 1s linear 0s 1 forwards;
+                        @include rotate-flap();
                     }
                 }
             }
             .letter {
-                @include go-up;
+                @include go-up-scale();
             }
         }
         &.falling {

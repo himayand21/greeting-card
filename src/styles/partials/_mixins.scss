@@ -1,12 +1,15 @@
-@mixin rotate-flap-and-fall {
-    animation: rotate-flap-and-fall 2s linear 0s 1 forwards;
+@mixin rotate-flap {
+    animation: rotate 1s linear 0s 1 forwards;
 }
+
 @mixin free-fall {
-    animation: free-fall 1s linear 1.5s 1 forwards;
+    animation: free-fall 1s linear 0s 1 forwards;
 }
-@mixin go-up {
-    animation: go-up 0.5s linear 1s 1 forwards;
+
+@mixin go-up-scale {
+    animation: go-up-scale 2s linear 1s 1 forwards;
 }
+
 @mixin flex-center {
     display: flex;
     justify-content: center;

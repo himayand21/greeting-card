@@ -4,6 +4,7 @@ import "./styles/app.scss";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [isFalling, setIsFalling] = useState(false);
+
   function openEnv() {
     if(!isOpen) {
       setIsOpen(true);
@@ -12,11 +13,13 @@ function App() {
       }, 1500);
     }
   }
+
   return (
     <div className="app">
       <div
-        className={`envlope-wrapper${isOpen ? ' open' : ''}${isFalling ? ' falling' : ''}`} 
-        onClick={openEnv}>
+        className={`envlope-wrapper ${isOpen && 'open'} ${isFalling && 'falling'}`} 
+        onClick={openEnv}
+      >
         <div className="envelope">
           <div className="front flap" />
           <div className="front pocket" />
