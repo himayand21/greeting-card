@@ -91,6 +91,9 @@
             &.left {
                 background: $card-face-bg;
                 z-index: 1;
+                img {
+                    width: 90%;
+                }
             }
         }
         &::after {
