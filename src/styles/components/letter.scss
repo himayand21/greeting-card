@@ -20,7 +20,6 @@
             height: $env-width * 0.9;
             width: $env-height * 0.9;
             transform-origin: top left;
-            color: black;
             position: absolute;
             overflow: hidden;
             @include flex-center;
@@ -32,6 +31,7 @@
                 opacity: 0;
                 font-size: (0.1 * $env-width);
                 font-family: 'Parisienne', cursive;
+                color: $color-flap;
                 h6, p {
                     margin: 0;
                 }
@@ -60,6 +60,7 @@
             }
             &.left {
                 background: linear-gradient(to left, white 50%, darken(white, 8%));
+                z-index: 1;
             }
         }
         &::after {

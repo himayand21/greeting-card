@@ -1,5 +1,6 @@
-$color-flap: #fdc14b;
-$color-env: lighten($color-flap, 15%);
+$color-flap: rgb(68, 64, 83);
+$color-env: rgb(255, 221, 0);
 $color-env2: darken($color-env, 6%);
-$color-bg: lighten($color-env, 15%);
+$color-bg: rgb(255, 252, 240);
 $color-box-shadow: darken(white, 25%);
+$color-red: rgb(214, 39, 40);

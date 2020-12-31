@@ -22,7 +22,12 @@
                     @include flip-card;
                 }
                 .front {
-                    @include flip-card-reverse;
+                    &.letter-image {
+                        @include flip-card-reverse-disappear;
+                    }
+                    &.left {
+                        @include flip-card-reverse-appear;
+                    }
                 }
                 .card-text {
                     @include show-content;
@@ -44,6 +49,7 @@
             margin-left: auto;
             margin-right: auto;
             top: 0px;
+            box-shadow: 0px 2px 60px $color-box-shadow;
             .front {
                 position: absolute;
                 width: 0;
@@ -77,7 +83,6 @@
                 background-color: $color-flap;
                 border-bottom-left-radius: $env-border-radius;
                 border-bottom-right-radius: $env-border-radius;
-                box-shadow: 0px 2px 60px $color-box-shadow;
             }
         }
     }

@@ -29,7 +29,6 @@ function App() {
         </div>
         <div className="letter">
           <div className="letter-face front left">
-            <section className="left-cover"></section>
           </div>
           <div className="letter-face front letter-image">
             <img src={newYear} alt="" />
@@ -39,7 +38,7 @@ function App() {
               <h6>Dear Friend</h6>
               <p>
                 Happy New Year 2021
-            </p>
+              </p>
             </section>
           </div>
         </div>
