@@ -1,4 +1,6 @@
 import { useState } from "react";
+import newYear from './assets/2021.png';
+
 import "./styles/app.scss";
 
 function App() {
@@ -26,10 +28,13 @@ function App() {
           <div className="back" />
         </div>
         <div className="letter">
-          <div className="letter-face front">
-            <p>Wish you a very happy new year from your favourite teacher. I hope you stay safe and progressive.
-              Blah and blah blah blah and blah
+          <div className="letter-face front left">
+            <p>
+              Happy New Year 2021
             </p>
+          </div>
+          <div className="letter-face front letter-image">
+            <img src={newYear} alt="" />
           </div>
           <div className="letter-face back">
 
