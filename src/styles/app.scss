@@ -3,6 +3,8 @@ body {
     // background-color: $color-bg;
     background-color: #2a240a;
     background-image: url("../assets/app-bg.png");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
     .app {
       text-align: center;
       height: 100vh;
