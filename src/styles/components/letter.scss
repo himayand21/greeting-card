@@ -73,7 +73,8 @@
                 z-index: 1;
             }
             &.back {
-                background: linear-gradient(to left, white 50%, darken(white, 8%));
+                // background: linear-gradient(to left, white 50%, darken(white, 8%));
+                background: $card-face-bg;
                 border-left: 1px solid darken(white, 12%);
                 box-sizing: border-box;
                 z-index: 1;
@@ -86,7 +87,8 @@
                 }
             }
             &.left {
-                background: linear-gradient(to left, white 50%, darken(white, 8%));
+                // background: linear-gradient(to left, white 50%, darken(white, 8%));
+                background: $card-face-bg;
                 z-index: 1;
             }
         }
