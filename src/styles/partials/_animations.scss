@@ -1,9 +1,9 @@
-@keyframes appear-scale {
+@keyframes appear {
   0% {
-    transform: scale(0.1);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
   }
 }
 

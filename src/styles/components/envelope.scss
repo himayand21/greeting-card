@@ -5,10 +5,11 @@
     .envlope-wrapper {
         height: $env-height;
         position: relative;
-        transform: scale(0.1);
-        @include appear-scale();
+        opacity: 0;
+        @include jump($env-height);
         @include letter-styles($env-width, $env-height);
         &.open {
+            opacity: 1;
             .envelope {
                 .front {
                     &.flap {
