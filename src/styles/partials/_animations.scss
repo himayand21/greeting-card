@@ -1,12 +1,9 @@
-@keyframes appear-scale {
+@keyframes appear {
   0% {
-    transform: translateY(-60vh) scale(0.1);
-  }
-  50% {
-    transform: translateY(5vh) scale(0.5);
+    opacity: 0;
   }
   100% {
-    transform: translateY(0px) scale(1);
+    opacity: 1;
   }
 }
 
@@ -37,7 +34,7 @@
     transform: rotateY(0deg);
   }
   100% {
-    transform: rotateY(-20deg);
+    transform: rotateY(-10deg);
   }
 }
 
@@ -47,7 +44,7 @@
     opacity: 1;
   }
   100% {
-    transform: rotateY(-145deg);
+    transform: rotateY(-170deg);
     opacity: 0;
   }
 }
@@ -58,7 +55,7 @@
     opacity: 0;
   }
   100% {
-    transform: rotateY(-145deg);
+    transform: rotateY(-170deg);
     opacity: 1;
   }
 }

@@ -10,16 +10,16 @@
     animation: go-up-scale4 2s linear 1s 1 forwards;
     @keyframes go-up-scale4 {
         0% {
-          transform: rotateZ(90deg) translateX(-25%);
+          transform: rotateZ(90deg) translateX(0);
         }
         33% {
           transform: rotateZ(90deg) translateX(-$env-height);
         }
         66% {
-          transform: scale(1.2) rotateZ(90deg) translateX(20%);
+          transform: scale(1.2) rotateZ(45deg) translateX($env-height / 2);
         }
         100% {
-          transform: scale(1.4) rotateZ(0deg) translateX(50%);
+          transform: scale(1.4) rotateZ(0deg) translateX($env-height / 2);
         }
     }
 }
@@ -46,6 +46,27 @@
     animation: show-content 0.3s linear 4s 1 forwards;
 }
 
-@mixin appear-scale {
-    animation: appear-scale 2s linear 0s 1 forwards;
+@mixin jump($env-height) {
+    &:not(.open) {
+        transform-style: preserve-3d;
+        animation: appear 1s linear 0s forwards, jump 3s linear 2s infinite backwards;
+        $offset: 0.1 * $env-height;
+        cursor: pointer;
+        @keyframes jump {
+            0% { transform: translate(0, 0) }
+            4% { transform: translate(0, -$offset / 2) }
+            8% { transform: translate(0, $offset / 2) }
+            12% { transform: translate(0, -$offset / 2) }
+            16% { transform: translate(0, $offset / 2)}
+            20% { transform: translate(0, -$offset / 2) }
+            24% { transform: translate(0, 0) }
+            60% { transform: translate(0, 0) }
+            64% { transform: translate(0, -$offset / 2) }
+            68% { transform: translate(0, $offset / 2) }
+            72% { transform: translate(0, -$offset / 2) }
+            76% { transform: translate(0, $offset / 2) }
+            80% { transform: translate(0, -$offset / 2) }
+            84% { transform: translate(0, 0, 0) }
+        }
+    }
 }

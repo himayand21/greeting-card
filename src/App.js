@@ -1,6 +1,5 @@
 import { useState } from "react";
 import newYear from './assets/2021.png';
-
 import "./styles/app.scss";
 
 function App() {
@@ -30,12 +29,16 @@ function App() {
         </div>
         <div className="letter">
           <div className="letter-face front left">
+            <div className="card-snowflake">
+            </div>
           </div>
           <div className="letter-face front letter-image">
             <img src={newYear} alt="" />
           </div>
           <div className="letter-face back">
             <section className="card-text">
+              <div className="card-snowflake">
+              </div>
               <div className="top">
                 <h6>To</h6>
                 <h6>A Random Visitor</h6>
