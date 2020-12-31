@@ -29,9 +29,15 @@
                 box-sizing: border-box;
                 transform-origin: center;
                 opacity: 0;
-                font-size: (0.1 * $env-width);
+                font-size: (0.05 * $env-width);
+                // font-size: 1em;
                 font-family: 'Parisienne', cursive;
                 color: $color-pen;
+                text-align: left;
+                display: flex;
+                height: 100%;
+                justify-content: space-around;
+                flex-direction: column;
                 h6, p {
                     margin: 0;
                 }

@@ -35,10 +35,17 @@ function App() {
           </div>
           <div className="letter-face back">
             <section className="card-text">
-              <h6>Dear Friend</h6>
+              <h6>Dear Name,</h6>
               <p>
-                Happy New Year 2021
+                Happy New Year 2021.
+                I hope this year brings you happiness and prosperity.
+
               </p>
+              <footer>
+              <h6>Lots of love</h6>
+              <h6>Another name</h6>
+              </footer>
+              
             </section>
           </div>
         </div>
