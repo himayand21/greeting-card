@@ -34,7 +34,7 @@
     transform: rotateY(0deg);
   }
   100% {
-    transform: rotateY(-20deg);
+    transform: rotateY(-10deg);
   }
 }
 
@@ -44,7 +44,7 @@
     opacity: 1;
   }
   100% {
-    transform: rotateY(-160deg);
+    transform: rotateY(-170deg);
     opacity: 0;
   }
 }
@@ -55,7 +55,7 @@
     opacity: 0;
   }
   100% {
-    transform: rotateY(-160deg);
+    transform: rotateY(-170deg);
     opacity: 1;
   }
 }
