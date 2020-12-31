@@ -1,6 +1,8 @@
 @import './components/components.scss';
 body {
-    background-color: $color-bg;
+    // background-color: $color-bg;
+    background-color: #2a240a;
+    background-image: url("../assets/app-bg.png");
     .app {
       text-align: center;
       height: 100vh;
