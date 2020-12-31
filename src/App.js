@@ -8,7 +8,7 @@ function App() {
   const [isFalling, setIsFalling] = useState(false);
 
   function openEnv() {
-    if(!isOpen) {
+    if (!isOpen) {
       setIsOpen(true);
       setTimeout(() => {
         setIsFalling(true);
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="app">
       <div
-        className={`envlope-wrapper ${isOpen && 'open'} ${isFalling && 'falling'}`} 
+        className={`envlope-wrapper ${isOpen && 'open'} ${isFalling && 'falling'}`}
         onClick={openEnv}
       >
         <div className="envelope">
@@ -29,15 +29,18 @@ function App() {
         </div>
         <div className="letter">
           <div className="letter-face front left">
-            <p>
-              Happy New Year 2021
-            </p>
+            <section className="left-cover"></section>
           </div>
           <div className="letter-face front letter-image">
             <img src={newYear} alt="" />
           </div>
           <div className="letter-face back">
-
+            <section className="card-text">
+              <h6>Dear Friend</h6>
+              <p>
+                Happy New Year 2021
+            </p>
+            </section>
           </div>
         </div>
       </div>
