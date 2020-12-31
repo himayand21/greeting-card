@@ -6,8 +6,22 @@
     animation: free-fall 1s linear 0s 1 forwards;
 }
 
-@mixin go-up-scale4 {
+@mixin go-up-scale4($env-height) {
     animation: go-up-scale4 2s linear 1s 1 forwards;
+    @keyframes go-up-scale4 {
+        0% {
+          transform: rotateZ(90deg) translateX(-25%);
+        }
+        33% {
+          transform: scale(1.1) rotateZ(90deg) translateX(-$env-height);
+        }
+        66% {
+          transform: scale(1.2) rotateZ(90deg) translateX(20%);
+        }
+        100% {
+          transform: scale(1.4) rotateZ(0deg) translateX(50%);
+        }
+    }
 }
 @mixin go-up-scale6 {
     animation: go-up-scale6 2s linear 1s 1 forwards;

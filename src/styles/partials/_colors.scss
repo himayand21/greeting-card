@@ -1,4 +1,5 @@
-$color-env: #0077b2;
-$color-env2: darken($color-env, 3%);
-$color-flap: darken($color-env, 20%);
-$color-bg: lighten($color-env, 48%);
+$color-flap: #fdc14b;
+$color-env: lighten($color-flap, 15%);
+$color-env2: darken($color-env, 6%);
+$color-bg: lighten($color-env, 15%);
+$color-box-shadow: darken(white, 25%);
