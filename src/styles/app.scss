@@ -1,10 +1,10 @@
 @import './components/components.scss';
 body {
-    // background-color: $color-bg;
-    background-color: #2a240a;
+    background-color: $color-bg;
     background-image: url("../assets/app-bg.png");
     background-repeat: repeat-x;
-    background-size: auto 100%;
+    background-position: center;
+    background-size: cover;
     .app {
       text-align: center;
       height: 100vh;
