@@ -1,12 +1,9 @@
 @keyframes appear-scale {
   0% {
-    transform: translateY(-60vh) scale(0.1);
-  }
-  50% {
-    transform: translateY(5vh) scale(0.5);
+    transform: scale(0.1);
   }
   100% {
-    transform: translateY(0px) scale(1);
+    transform: scale(1);
   }
 }
 

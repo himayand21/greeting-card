@@ -5,6 +5,7 @@
     .envlope-wrapper {
         height: $env-height;
         position: relative;
+        transform: scale(0.1);
         @include appear-scale();
         @include letter-styles($env-width, $env-height);
         &.open {
