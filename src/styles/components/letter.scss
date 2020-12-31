@@ -54,6 +54,7 @@
                     @include flex-center;
                     flex: 1;
                     font-size: (0.06 * $env-width);
+                    font-weight: bold;
                 }
                 h6 {
                     font-size: (0.04 * $env-width);
