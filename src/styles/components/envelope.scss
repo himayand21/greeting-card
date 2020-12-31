@@ -1,11 +1,12 @@
 @import "./letter.scss";
+
 @mixin envelope-style($env-width) {
     $env-height: 0.6 * $env-width;
     .envlope-wrapper {
         height: $env-height;
         position: relative;
+        @include appear-scale();
         @include letter-styles($env-width, $env-height);
-
         &.open {
             .envelope {
                 .front {
@@ -16,8 +17,6 @@
             }
             .letter {
                 @include go-up-scale4($env-height);
-            }
-            .letter {
                 .back {
                     @include flip-card;
                 }
@@ -31,7 +30,6 @@
                 }
                 .card-text {
                     @include show-content;
-
                 }
             }
         }
