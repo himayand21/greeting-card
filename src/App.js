@@ -18,6 +18,7 @@ function App() {
 
   return (
     <div className="app">
+      <div className="bg-image" />
       <div
         className={`envlope-wrapper ${isOpen && 'open'} ${isFalling && 'falling'}`}
         onClick={openEnv}
