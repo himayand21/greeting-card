@@ -1,15 +1,62 @@
 @mixin letter-styles {
     .letter {
         position: relative;
-        background-color: #fff;
-        width: 265px;
+        height: 265px;
         margin-left: auto;
         margin-right: auto;
-        height: 175px;
+        width: 175px;
         top: -90px;
         border-radius: $env-border-radius;
-        box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+        // box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
         z-index: 2;
+        transform-style: preserve-3d;
+        perspective: 1500px;
+        transform: rotateZ(90deg) translateX(-25%);
+        .letter-face{
+            top: 0px;
+            left: 0px;
+            height: 265px;
+            width: 175px;
+            transform-origin: top left;
+            color: black;
+            position: absolute;
+            overflow: hidden;
+            box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-image: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0) 25%,
+                    rgba(215, 227, 239, 0.7) 55%,
+                    rgba(215, 227, 239, 1) 100%
+                );
+            }
+            border-left: 0.5px solid lightgray;
+            p{
+                width: 175px;
+                height: 265px;
+                transform: rotateY(145deg);
+                transform-origin: center;
+                opacity: 0;
+                font-size: 20px;
+                font-family: 'Caveat', cursive;
+            }
+            &.front {
+                background: white;
+                z-index: 1;
+
+            }
+            &.back {
+                background: white;
+                z-index: 1;
+
+            }
+        }
         &::after {
             content: "";
             position: absolute;
@@ -17,12 +64,27 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background-image: linear-gradient(
-                180deg,
-                rgba(255, 255, 255, 0) 25%,
-                rgba(215, 227, 239, 0.7) 55%,
-                rgba(215, 227, 239, 1) 100%
-            );
+            // background-image: linear-gradient(
+            //     180deg,
+            //     rgba(255, 255, 255, 0) 25%,
+            //     rgba(215, 227, 239, 0.7) 55%,
+            //     rgba(215, 227, 239, 1) 100%
+            // );
         }
     }
 }
+
+// @media only screen and (min-width: 1000px) {
+//     .letter  {
+//         height: 394px;
+//         width: 260px;
+//         .letter-face {
+//             height: 394px;
+//         width: 260px; 
+//         p{
+//             height: 394px;
+//         width: 260px;
+//         }
+//         }
+//     }
+// }

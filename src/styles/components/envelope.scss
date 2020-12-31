@@ -13,7 +13,28 @@
                 }
             }
             .letter {
-                @include go-up-scale();
+                @include go-up-scale4();
+            }
+            @media (max-width: 750px) {
+                .letter {
+                    @include go-up-scale4();
+                }
+            }
+            @media(min-width: 1000px) {
+                .letter {
+                    @include go-up-scale6();
+                }
+            }
+            .letter {
+                .back {
+                    @include flip-card;
+                }
+                .front {
+                    @include flip-card-reverse;
+                    p {
+                        @include show-content;
+                    }
+                }
             }
         }
         &.falling {
