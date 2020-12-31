@@ -29,11 +29,38 @@
                 box-sizing: border-box;
                 transform-origin: center;
                 opacity: 0;
-                font-size: (0.1 * $env-width);
                 font-family: 'Parisienne', cursive;
                 color: $color-pen;
+                height: 100%;
+                @include flex-center;
+                flex-direction: column;
+                justify-content: space-around;
                 h6, p {
                     margin: 0;
+                }
+                p {
+                    @include flex-center;
+                    flex: 1;
+                    font-size: (0.06 * $env-width);
+                }
+                h6 {
+                    font-size: (0.04 * $env-width);
+                }
+                .top {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-self: flex-start;
+                    flex: 1;
+                    text-align: left;
+                }
+                .bottom {
+                    flex: 1;
+                    align-self: flex-end;
+                    text-align: right;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
                 }
             }
             .left-cover {
