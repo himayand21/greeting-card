@@ -1,17 +1,51 @@
-import "./App.scss";
+import { useState } from "react";
+import newYear from './assets/2021.png';
+
+import "./styles/app.scss";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isFalling, setIsFalling] = useState(false);
+
+  function openEnv() {
+    if (!isOpen) {
+      setIsOpen(true);
+      setTimeout(() => {
+        setIsFalling(true);
+      }, 1500);
+    }
+  }
+
   return (
-    <div className="App">
-      <div className="envlope-wrapper">
+    <div className="app">
+      <div className="bg-image" />
+      <div
+        className={`envlope-wrapper ${isOpen && 'open'} ${isFalling && 'falling'}`}
+        onClick={openEnv}
+      >
         <div className="envelope">
-          <div className="front flap"></div>
-          <div className="front pocket"></div>
-          <div className="letter">
-            <div className="words line1"></div>
-            <div className="words line2"></div>
-            <div className="words line3"></div>
-            <div className="words line4"></div>
+          <div className="front flap" />
+          <div className="front pocket" />
+          <div className="back" />
+        </div>
+        <div className="letter">
+          <div className="letter-face front left">
+          </div>
+          <div className="letter-face front letter-image">
+            <img src={newYear} alt="" />
+          </div>
+          <div className="letter-face back">
+            <section className="card-text">
+              <div className="top">
+                <h6>To</h6>
+                <h6>A Random Visitor</h6>
+              </div>
+              <p>We wish you a very happy and prosperous new year 2021</p>
+              <div className="bottom">
+                <h6>From</h6>
+                <h6>The Dev Team</h6>
+              </div>
+            </section>
           </div>
         </div>
       </div>

@@ -1,0 +1,87 @@
+@import "./letter.scss";
+
+@mixin envelope-style($env-width) {
+    $env-height: 0.6 * $env-width;
+    .envlope-wrapper {
+        height: $env-height;
+        position: relative;
+        @include appear-scale();
+        @include letter-styles($env-width, $env-height);
+        &.open {
+            .envelope {
+                .front {
+                    &.flap {
+                        @include rotate-flap();
+                    }
+                }
+            }
+            .letter {
+                @include go-up-scale4($env-height);
+                .back {
+                    @include flip-card;
+                }
+                .front {
+                    &.letter-image {
+                        @include flip-card-reverse-disappear;
+                    }
+                    &.left {
+                        @include flip-card-reverse-appear;
+                    }
+                }
+                .card-text {
+                    @include show-content;
+                }
+            }
+        }
+        &.falling {
+            .envelope {
+                @include free-fall();
+            }
+        }
+        .envelope {
+            position: relative;
+            width: $env-width;
+            height: $env-height;
+            border-bottom-left-radius: $env-border-radius;
+            border-bottom-right-radius: $env-border-radius;
+            margin-left: auto;
+            margin-right: auto;
+            top: 0px;
+            box-shadow: 0px 2px 60px $color-box-shadow;
+            .front {
+                position: absolute;
+                width: 0;
+                height: 0;
+                &.flap {
+                    border-left: ($env-width / 2) solid transparent;
+                    border-right: ($env-width / 2) solid transparent;
+                    border-bottom: ($env-height / 2) - (0.05 * $env-width) solid transparent; /* a little smaller */
+                    border-top: ($env-height / 2) + (0.05 * $env-width) solid $color-flap; /* a little larger */
+                    transform-origin: top;
+                    z-index: 5;
+                    pointer-events: none;
+                }
+                &.pocket {
+                    border-left: ($env-width / 2) solid $color-env;
+                    border-right: ($env-width / 2) solid $color-env;
+                    border-bottom: ($env-height / 2) solid $color-env2;
+                    border-top: ($env-height / 2) solid transparent;
+                    border-bottom-left-radius: $env-border-radius;
+                    z-index: 4;
+                    border-bottom-right-radius: $env-border-radius;
+                }
+            }
+            .back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                background-color: $color-flap;
+                border-bottom-left-radius: $env-border-radius;
+                border-bottom-right-radius: $env-border-radius;
+            }
+        }
+    }
+}

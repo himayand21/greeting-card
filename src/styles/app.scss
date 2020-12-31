@@ -1,0 +1,37 @@
+@import './components/components.scss';
+body {
+    background-color: $color-bg;
+    .bg-image {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      filter: blur(2px);
+      background-image: url("../assets/app-bg.png");
+      background-repeat: repeat-x;
+      background-position: center;
+      background-size: cover;
+    }
+    .app {
+      text-align: center;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      @include flex-center();
+      @media only screen and (max-width: 599px) {
+        @include envelope-style(50vw);
+      }
+      @media only screen and (min-width: 600px) {
+        @include envelope-style(45vw);
+      }
+      @media only screen and (min-width: 768px) {
+        @include envelope-style(40vw);
+      }
+      @media only screen and (min-width: 992px) {
+        @include envelope-style(30vw);
+      }
+      @media only screen and (min-width: 1200px) {
+        @include envelope-style(25vw);
+      }
+    }
+}

@@ -1,0 +1,51 @@
+@mixin rotate-flap {
+    animation: rotate 1s linear 0s 1 forwards;
+}
+
+@mixin free-fall {
+    animation: free-fall 1s linear 0s 1 forwards;
+}
+
+@mixin go-up-scale4($env-height) {
+    animation: go-up-scale4 2s linear 1s 1 forwards;
+    @keyframes go-up-scale4 {
+        0% {
+          transform: rotateZ(90deg) translateX(-25%);
+        }
+        33% {
+          transform: rotateZ(90deg) translateX(-$env-height);
+        }
+        66% {
+          transform: scale(1.2) rotateZ(90deg) translateX(20%);
+        }
+        100% {
+          transform: scale(1.4) rotateZ(0deg) translateX(50%);
+        }
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flip-card {
+    animation: flip-card 1s linear 3s 1 forwards;
+}
+
+@mixin flip-card-reverse-disappear {
+    animation: flip-card-reverse-disappear 1s linear 3s 1 forwards;
+}
+
+@mixin flip-card-reverse-appear {
+    animation: flip-card-reverse-appear 1s linear 3s 1 forwards;
+}
+
+@mixin show-content {
+    animation: show-content 0.3s linear 4s 1 forwards;
+}
+
+@mixin appear-scale {
+    animation: appear-scale 2s linear 0s 1 forwards;
+}
