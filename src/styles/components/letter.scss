@@ -22,6 +22,9 @@
             transform-origin: top left;
             position: absolute;
             overflow: hidden;
+            .fire-works {
+                height: 70%;
+            }
             @include flex-center;
             .card-text {
                 margin: unset;
