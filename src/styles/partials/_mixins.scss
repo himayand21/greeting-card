@@ -23,9 +23,6 @@
         }
     }
 }
-@mixin go-up-scale6 {
-    animation: go-up-scale6 2s linear 1s 1 forwards;
-}
 
 @mixin flex-center {
     display: flex;
@@ -45,6 +42,10 @@
     animation: flip-card-reverse-appear 1s linear 3s 1 forwards;
 }
 
-@mixin  show-content {
+@mixin show-content {
     animation: show-content 0.3s linear 4s 1 forwards;
+}
+
+@mixin appear-scale {
+    animation: appear-scale 2s linear 0s 1 forwards;
 }
