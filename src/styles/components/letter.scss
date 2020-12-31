@@ -19,9 +19,9 @@
             background-position: center;
             width: 100%;
             height: 100%;
-            background-image: url('../../assets/snowflake.png');
+            background-image: url("../../assets/snowflake.png");
         }
-        .letter-face{
+        .letter-face {
             top: 0px;
             left: 0px;
             height: $env-width * 0.9;
@@ -39,14 +39,15 @@
                 box-sizing: border-box;
                 transform-origin: center;
                 opacity: 0;
-                font-family: 'Parisienne', cursive;
+                font-family: "Parisienne", cursive;
                 color: $color-pen;
                 height: 100%;
                 @include flex-center;
                 flex-direction: column;
                 justify-content: space-around;
                 position: relative;
-                h6, p {
+                h6,
+                p {
                     margin: 0;
                 }
                 p {
@@ -88,8 +89,10 @@
                 z-index: 1;
             }
             &.back {
-                background: $card-face-bg;
-                border-left: 1px solid darken(white, 12%);
+                // background: $card-face-bg;
+                // border-left: 1px solid darken(white, 12%);
+                background: linear-gradient(to left, #fff4ce 50%, #c6b165);
+                border-left: none;
                 box-sizing: border-box;
                 z-index: 1;
             }
